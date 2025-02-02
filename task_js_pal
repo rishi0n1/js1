@@ -1,15 +1,14 @@
-var aos=["mom","js","malayalam","html","css","dad"];
-res=[]
-for(i=0;i<aos.length;i++){
-    k=""
-    dup=aos[i]
-    m=dup.length-1
-    for(j in dup){
-        k=k+dup[m]
-        m=m-1
+var aos = ["mom", "js", "malayalam", "html", "css", "dad"];
+var op = [];
+var i = 0;
+
+while (i < aos.length) {
+    var word = aos[i];
+    var new = word.split('').reverse().join('');
+    if (word === new) {
+        op.push(word);
     }
-    if(k==dup){
-        res.push(aos[i])
-    }
+    i++;
 }
-console.log(res)
+
+console.log(op);  // Output: ["mom", "malayalam", "dad"]
